@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/sub.css">
+	<title>管理画面</title>
+
+</head>
+
+<body>
+	<form name="form1" method="post" action="del_confirm.php">
+	<input type="hidden" name="delete" value="on">
+	<input type="hidden" name="token" value="%token%">
+	
+	<header class="content">
+		<div class="main-content">
+			<div id="header-l"><img src="../images/logo.jpg" width="250" height="46" alt="" border="0" /></div>
+
+			<div id="header-r">
+				<div id="logout"><a href="../index.php" class="bt-home">TOP</a><a href="../logout.php" class="bt-logout">LOGOUT</a></div>
+			</div>
+			<span class="clear">&nbsp;</span>
+		</div>
+	</header>
+
+	<section class="content">
+		<div class="main-content">
+			<p class="title">新着情報管理（英語サイト）</p>
+
+
+			<p class="news-subtitle">削除</p>
+
+
+			<div class="mt30">
+				<p class="read">以下の情報を削除します。 よろしければ「削除」ボタンを押してください。<br>
+				<span class="del-txt-caution">※ 一度削除したデータは復活できませんのでご注意ください。</span></p>
+			</div>
+
+			<table border="0" cellpadding="0" cellspacing="0" width="1000">
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">掲載日</td>
+
+				<td align="left" valign="middle" class="tb-body">%post_year%年%post_month%月%post_day%日&nbsp;%post_hour%時%post_min%分</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">タイトル</td>
+
+				<td align="left" valign="top" class="tb-body">%title%</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">表示期間</td>
+
+				<td align="left" valign="middle" class="tb-body">
+<!-- tmpl:ifdef %s_disp_date_exists% -->
+					%s_disp_year%年%s_disp_month%月%s_disp_day%日&nbsp;%s_disp_hour%時%s_disp_min%分〜
+<!-- tmpl:endif -->
+<!-- tmpl:ifdef %e_disp_date_exists% -->
+					%e_disp_year%年%e_disp_month%月%e_disp_day%日&nbsp;%e_disp_hour%時%e_disp_min%分
+<!-- tmpl:endif -->
+				</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">カテゴリー</td>
+
+				<td align="left" valign="middle" class="tb-body">%category%</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">固定表示</td>
+
+				<td align="left" valign="middle" class="tb-body">%fixed_disp%
+<!-- tmpl:ifdef %fixed_disp1% -->
+					（掲載期限%fixed_disp_year%年%fixed_disp_month%月%fixed_disp_day%日まで）
+<!-- tmpl:endif -->
+				</td>
+			</tr>
+
+<!-- tmpl:ifdef %format1% -->
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">表示形態</td>
+
+				<td align="left" valign="top" class="tb-body">本文あり</td>
+			</tr>
+<!-- tmpl:endif -->
+
+<!-- tmpl:ifdef %format2% -->
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">表示形態</td>
+
+				<td align="left" valign="top" class="tb-body">本文無し（添付ファイル表示）：%file_only%</td>
+			</tr>
+<!-- tmpl:endif -->
+
+<!-- tmpl:ifdef %format3% -->
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">表示形態</td>
+
+				<td align="left" valign="top" class="tb-body">本文無し（リンクのみ）：%link_only_url%</td>
+			</tr>
+<!-- tmpl:endif -->
+
+<!-- tmpl:ifdef %format1% -->
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">本文</td>
+
+				<td align="left" valign="top" class="tb-body">%body%</td>
+			</tr>
+<!-- tmpl:endif -->
+			</table>
+
+			<div class="fm-btn"><a href="javascript:void(0);" class="btn-del" onclick="form1.submit();return false;">削　除</a></div>
+
+			<p class="back"><a href="javascript:void(0);" onclick="window.history.back(); return false;">前の画面へ戻る</a></p>
+
+		</div>
+	</section>
+
+	</form>
+</body>
+
+</html>

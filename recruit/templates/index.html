@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" class="top">
+<head>
+    <title>採用情報 | 旭倉庫株式会社</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/header.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/footer.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/page/recruit.css">
+
+    <!-- ファビコン -->
+    <link rel="icon" sizes="150x150" href="../assets/img/app-icon.png">
+    <link rel="apple-touch-icon" sizes="150x150"  href="../assets/img/app-icon.png">
+    
+    <!--#include virtual="../inc/ga.html" -->
+</head>
+<body id="page-recruit" class="page-type1">
+    <!--#include virtual="../inc/header.html" -->
+    <main id="site-content">
+        <div class="site-content-inner">
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">HOME</a></li>
+                        <li class="breadcrumb__item">採用案内</li>
+                    </ul>
+                </div>
+                <div class="h1-type1 ver2">
+                    <h1 class="h1-type1__ja">採用案内</h1>
+                    <div class="h1-type1__en">Recruitment Information</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <section class="recruit-box">
+                    <div class="recruit-box__inner">
+                        <div class="recruit-box__title">募集要項</div>
+<!-- tmpl:ifdef %banner_disp% -->
+                        <div class="recruit-box__banner">
+                            <a href="%link_url%" target="_blank" class="recruit-box__link">
+                                <img src="../assets/img/recruit/bnr.png" alt="" class="recruit-box__img">
+                            </a>
+                        </div>
+<!-- tmpl:endif -->
+                        <ul class="recruit-box__list">
+<!-- tmpl:loop %loop% -->
+                            <li class="recruit-box__item">
+                                <div class="recuruit-box__head">%item_name%</div>
+                                <div class="recuruit-box__body">%item_contents%</div>
+                            </li>
+<!-- tmpl:endloop %loop% -->
+<!-- tmpl:ifdef %ref_url% -->
+                            <li class="recruit-box__item">
+                                <div class="recuruit-box__head">%ref_url_name%</div>
+                                <div class="recuruit-box__body"><a href="%ref_url%" target="_blank" rel="noopener noreferrer">%ref_url%</a></div>
+                            </li>
+<!-- tmpl:endif -->
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!--#include virtual="../inc/footer.html" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/lib/inview/jquery.inview.js"></script>
+    <script src="../assets/lib/slick/slick.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

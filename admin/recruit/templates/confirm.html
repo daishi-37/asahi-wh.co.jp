@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/sub.css">
+	<title>管理画面</title>
+
+</head>
+
+<body>
+	<form name="f" method="post" action="confirm.php">
+	<input type="hidden" name="regist" value="on">
+	<input type="hidden" name="token" value="%token%">
+	
+	<header class="content">
+		<div class="main-content">
+			<div id="header-l"><img src="../images/logo.jpg" width="250" height="46" border="0" /></div>
+
+			<div id="header-r">
+				<div id="logout"><a href="../index.php" class="bt-home">TOP</a><a href="../logout.php" class="bt-logout">LOGOUT</a></div>
+			</div>
+			<span class="clear">&nbsp;</span>
+		</div>
+	</header>
+
+	<section class="content">
+		<div class="main-content">
+			<p class="title">採用案内管理（日本語サイト）</p>
+
+			<p class="rec-subtitle">リクナビバナーの表示</p>
+			<table border="0" cellpadding="0" cellspacing="0" width="1000" class="mb40">
+			<tr>
+				<td align="left" valign="middle" class="rec-tb-title">バナー</td>
+
+				<td align="left" valign="middle" class="tb-body">%banner_disp%</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="rec-tb-title">リンク先URL</td>
+
+				<td align="left" valign="middle" class="tb-body">%link_url%</td>
+			</tr>
+			</table>
+
+
+			<p class="rec-subtitle">採用案内ページの表示</p>
+			<table border="0" cellpadding="0" cellspacing="0" width="1000">
+			<tr>
+				<td align="left" valign="middle" class="rec-tb-title">募集内容</td>
+
+				<td align="left" valign="middle" class="tb-body">%publish%</td>
+			</tr>
+<!-- tmpl:loop %loop% -->
+			<tr>
+				<td align="left" valign="middle" class="rec-tb-title">%item_name%</td>
+
+				<td align="left" valign="middle" class="tb-body">%item_contents%</td>
+			</tr>
+<!-- tmpl:endloop %loop% -->
+<!-- tmpl:ifdef %ref_url% -->
+			<tr>
+				<td align="left" valign="middle" class="rec-tb-title-ref">%ref_url_name%</td>
+
+				<td align="left" valign="middle" class="rec-tb-body-ref">%ref_url%</td>
+			</tr>
+<!-- tmpl:endif -->
+			</table>
+
+
+
+			<div class="fm-btn"><a href="javascript:void(0);" onclick="f.submit();return false;" class="btn-touroku">更　新</a></div>
+
+			<p class="back"><a href="javascript:void(0);" onclick="window.history.back(); return false;">前の画面へ戻る</a></p>
+
+		</div>
+	</section>
+
+	</form>
+</body>
+
+</html>

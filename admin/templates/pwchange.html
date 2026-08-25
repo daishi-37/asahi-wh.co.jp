@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-style-type" content="text/css" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+
+	<link rel="stylesheet" type="text/css" media="all" href="css/login.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/login-add.css">
+
+	<title>管理画面</title>
+</head>
+
+<body>
+	<div id="centerMiddle">
+		<form action="./pwchange.php" name="form1" method="post">
+		<input type="hidden" name="token" value="%token%">
+		<div class="logo"><img src="images/logo.jpg" width="250" height="46" border="0" /></div>
+
+		<div id="login-id">
+			<p class="title">新しいPASS</p>
+			<div><input type="password" name="pass-new" value="" class="input-box" style="width:250px" maxlength="40" autofocus></div>
+		</div>
+
+		<div id="login-pass">
+			<p class="title">新しいPASSの確認</p>
+			<div><input type="password" name="pass-cnf" value="" class="input-box" style="width:250px" maxlength="40"></div>
+		</div>
+<!-- tmpl:ifdef %error% -->
+		<div id="login-err">
+			<div>半角英大文字・英小文字・数字・記号混合8～40桁で指定してください</div>
+		</div>
+<!-- tmpl:endif -->
+		<div id="login"><a href="javascript: void(0);" onclick="form1.submit(); return false;" class="bt-login">パスワードを変更</a></div>
+		</form>
+	</div>
+</body>
+
+</html>

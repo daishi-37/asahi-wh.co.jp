@@ -1,0 +1,29 @@
+以下の問い合わせがありました。
+
+＜問い合わせ種別＞
+%category%
+
+＜ご氏名＞
+%name%
+
+＜会社名＞
+%company%
+
+＜所在地＞
+%postcode%
+%pref%
+%address%
+
+<!-- tmpl:ifdef %department% -->
+＜ご担当部署＞
+%department%
+
+<!-- tmpl:endif -->
+＜メールアドレス＞
+%email%
+
+＜ご連絡先＞
+%telephone1%-%telephone2%-%telephone3%
+
+＜問い合わせ内容＞
+%content%

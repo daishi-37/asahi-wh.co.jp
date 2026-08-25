@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" class="top">
+<head>
+    <title>お問い合わせ | 旭倉庫株式会社</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/header.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/footer.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/page/contact.css">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/style-add.css">
+
+    <!-- ファビコン -->
+    <link rel="icon" sizes="150x150" href="../assets/img/app-icon.png">
+    <link rel="apple-touch-icon" sizes="150x150"  href="../assets/img/app-icon.png">
+    
+    <!--#include virtual="../inc/ga.html" -->
+</head>
+<body id="page-contact" class="page-type1">
+    <!--#include virtual="../inc/header.html" -->
+    <main id="site-content">
+        <div class="site-content-inner">
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">HOME</a></li>
+                        <li class="breadcrumb__item">お問い合わせ</li>
+                    </ul>
+                </div>
+                <div class="h1-type1">
+                    <h1 class="h1-type1__ja">お問い合わせ</h1>
+                    <div class="h1-type1__en">Contact</div>
+                    <div class="h1-type1__text">必要事項を入力して、確認ボタンを押してください。</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <section class="contact-input contact-form">
+                    <form action="./index.php" method="post">
+                    <input type="hidden" name="token" value="%token%">
+                        <div class="contact-form__inner">
+<!-- tmpl:ifdef %error% -->
+                        <div class="contact-form__th contact-form__color-red">%error%</div>
+<!-- tmpl:endif -->
+                            <ul class="contact-form__table">
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th required">
+                                        お問い合わせ種別
+                                    </div>
+                                    <div class="contact-form__td input-radio">
+                                        <input type="radio" name="category" value="1;法人貨物（危険品、食品等）保管・荷役作業に関するお問い合わせ" id="category1"%category1_checked%>
+                                        <label for="category1">法人貨物（危険品、食品等）保管・荷役作業に関するお問い合わせ</label>
+                                        <input type="radio" name="category" value="2;トランクルーム（家財、衣類、レジャー用品等の収納・保管）に関するお問い合わせ" id="category2"%category2_checked%>
+                                        <label for="category2">トランクルーム（家財、衣類、レジャー用品等の収納・保管）に関するお問い合わせ</label>
+                                        <input type="radio" name="category" value="3;書類の保管に関するお問い合わせ" id="category3"%category3_checked%>
+                                        <label for="category3">書類の保管に関するお問い合わせ</label>
+                                        <input type="radio" name="category" value="4;書類や図面等の電子化に関するお問い合わせ" id="category4"%category4_checked%>
+                                        <label for="category4">書類や図面等の電子化に関するお問い合わせ</label>
+                                        <input type="radio" name="category" value="5;個人情報に関するお問い合わせ" id="category5"%category5_checked%>
+                                        <label for="category5">個人情報に関するお問い合わせ</label>
+                                        <input type="radio" name="category" value="6;その他お問い合わせ" id="category6"%category6_checked%>
+                                        <label for="category6">その他お問い合わせ</label>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th required">
+                                        ご氏名
+                                    </div>
+                                    <div class="contact-form__td input-text w355">
+                                        <input type="text" name="name" placeholder="例：山田　太郎" value="%name%">
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th">
+                                        会社名
+                                    </div>
+                                    <div class="contact-form__td input-text w355">
+                                        <input type="text" name="company" placeholder="例：旭倉庫株式会社" value="%company%">
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th required">
+                                        所在地
+                                    </div>
+                                    <div class="contact-form__td input-address">
+                                        <div class="input-address__row">
+                                            <label for="" class="input-address__postcode-label input-address__label">郵便番号</label>
+                                            <div class="input-address__postcode-input-wrap input-address__input-wrap">
+                                                <input type="input" name="postcode" placeholder="例：123-4567" class="input-address__input" value="%postcode%">
+                                            </div>
+                                        </div>
+                                        <div class="input-address__row">
+                                            <label for="" class="input-address__pref-label input-address__label">都道府県</label>
+                                            <div class="input-address__pref-input-wrap input-address__select-wrap">
+                                                <select name="pref" class="input-address__select">
+                                                    <option value="">選択してください</option>
+                                                    <option value="1;北海道"%pref1_selected%>北海道</option>
+                                                    <option value="2;青森県"%pref2_selected%>青森県</option>
+                                                    <option value="3;岩手県"%pref3_selected%>岩手県</option>
+                                                    <option value="4;宮城県"%pref4_selected%>宮城県</option>
+                                                    <option value="5;秋田県"%pref5_selected%>秋田県</option>
+                                                    <option value="6;山形県"%pref6_selected%>山形県</option>
+                                                    <option value="7;福島県"%pref7_selected%>福島県</option>
+                                                    <option value="8;茨城県"%pref8_selected%>茨城県</option>
+                                                    <option value="9;栃木県"%pref9_selected%>栃木県</option>
+                                                    <option value="10;群馬県"%pref10_selected%>群馬県</option>
+                                                    <option value="11;埼玉県"%pref11_selected%>埼玉県</option>
+                                                    <option value="12;千葉県"%pref12_selected%>千葉県</option>
+                                                    <option value="13;東京都"%pref13_selected%>東京都</option>
+                                                    <option value="14;神奈川県"%pref14_selected%>神奈川県</option>
+                                                    <option value="15;新潟県"%pref15_selected%>新潟県</option>
+                                                    <option value="16;富山県"%pref16_selected%>富山県</option>
+                                                    <option value="17;石川県"%pref17_selected%>石川県</option>
+                                                    <option value="18;福井県"%pref18_selected%>福井県</option>
+                                                    <option value="19;山梨県"%pref19_selected%>山梨県</option>
+                                                    <option value="20;長野県"%pref20_selected%>長野県</option>
+                                                    <option value="21;岐阜県"%pref21_selected%>岐阜県</option>
+                                                    <option value="22;静岡県"%pref22_selected%>静岡県</option>
+                                                    <option value="23;愛知県"%pref23_selected%>愛知県</option>
+                                                    <option value="24;三重県"%pref24_selected%>三重県</option>
+                                                    <option value="25;滋賀県"%pref25_selected%>滋賀県</option>
+                                                    <option value="26;京都府"%pref26_selected%>京都府</option>
+                                                    <option value="27;大阪府"%pref27_selected%>大阪府</option>
+                                                    <option value="28;兵庫県"%pref28_selected%>兵庫県</option>
+                                                    <option value="29;奈良県"%pref29_selected%>奈良県</option>
+                                                    <option value="30;和歌山県"%pref30_selected%>和歌山県</option>
+                                                    <option value="31;鳥取県"%pref31_selected%>鳥取県</option>
+                                                    <option value="32;島根県"%pref32_selected%>島根県</option>
+                                                    <option value="33;岡山県"%pref33_selected%>岡山県</option>
+                                                    <option value="34;広島県"%pref34_selected%>広島県</option>
+                                                    <option value="35;山口県"%pref35_selected%>山口県</option>
+                                                    <option value="36;徳島県"%pref36_selected%>徳島県</option>
+                                                    <option value="37;香川県"%pref37_selected%>香川県</option>
+                                                    <option value="38;愛媛県"%pref38_selected%>愛媛県</option>
+                                                    <option value="39;高知県"%pref39_selected%>高知県</option>
+                                                    <option value="40;福岡県"%pref40_selected%>福岡県</option>
+                                                    <option value="41;佐賀県"%pref41_selected%>佐賀県</option>
+                                                    <option value="42;長崎県"%pref42_selected%>長崎県</option>
+                                                    <option value="43;熊本県"%pref43_selected%>熊本県</option>
+                                                    <option value="44;大分県"%pref44_selected%>大分県</option>
+                                                    <option value="45;宮崎県"%pref45_selected%>宮崎県</option>
+                                                    <option value="46;鹿児島県"%pref46_selected%>鹿児島県</option>
+                                                    <option value="47;沖縄県"%pref47_selected%>沖縄県</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="input-address__row">
+                                            <label for="" class="input-address__city-label input-address__label">市町村・番地・ビル名</label>
+                                            <div class="input-address__city-input-wrap input-address__input-wrap">
+                                                <input type="input" name="address" placeholder="例：中央区月島1-14-7" class="input-address__input" value="%address%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th">
+                                        ご担当部署
+                                    </div>
+                                    <div class="contact-form__td input-text">
+                                        <input type="text" name="department" placeholder="例：営業部" value="%department%">
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th required">
+                                        メールアドレス
+                                    </div>
+                                    <div class="contact-form__td input-text">
+                                        <input type="email" name="email" placeholder="例：info@asahi-wh.co.jp" value="%email%">
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th required">
+                                        ご連絡先
+                                    </div>
+                                    <div class="contact-form__td input-telephone">
+                                        <input type="input" name="telephone1" inputmode="numeric" placeholder="例：03" value="%telephone1%">
+                                        <span></span>
+                                        <input type="input" name="telephone2" inputmode="numeric" placeholder="例：3531" value="%telephone2%">
+                                        <span></span>
+                                        <input type="input" name="telephone3" inputmode="numeric" placeholder="例：3111" value="%telephone3%">
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th required">
+                                        問い合わせ内容
+                                    </div>
+                                    <div class="contact-form__td input-text">
+                                        <textarea name="content" id="" maxlength="1000">%content%</textarea>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th required">
+                                        個人情報について
+                                    </div>
+                                    <div class="contact-form__td input-terms">
+                                        <div class="input-terms__text">送信の前に「個人情報の取扱いについて」 を必ず確認いただき「同意する」にチェックをいれてください。</div>
+                                        <div class="input-terms__term">
+                                            <div class="input-terms__term-inmput">
+                                                <p>
+                                                    個人情報の取扱いについて<br>
+                                                    <br>
+
+							＜事業者の名称＞<br>
+							旭倉庫株式会社<br><br>
+
+							＜個人情報保護管理者の氏名又は職名、所属及び連絡先＞<br>
+							小杉　早太　TEL：03-3531-3111<br><br>
+
+							＜個人情報の利用目的＞<br>
+							お預かりした個人情報は、お問い合わせに関する回答などのために利用します。入力情報を届けることは任意ですが、正しく届出されない場合は、お問い合わせに応じられない可能性もありますのでご承知おきください。<br><br>
+
+							＜個人情報の第三者提供について＞<br>
+							ご本人の同意がある場合または法令に基づく場合を除き、今回ご入力いただく個人情報は第三者に提供しません。<br><br>
+
+							＜個人情報の委託について＞<br>
+							個人情報の取り扱いを外部に委託する場合は、当社が規定する個人情報管理基準を満たす企業を選定して委託を行い、適切な取り扱いが行われるよう監督します。<br><br>
+
+							＜保有個人データの開示等の請求等について＞<br>
+							本人からの求めにより、当社が取得した保有個人データの利用目的の通知、開示、内容の訂正・追加又は削除、利用の停止・消去、第三者への提供の停止及び第三者提供記録の開示（「開示等の請求等」といいます。）に応じます。<br>
+							開示等の請求等に応じる窓口は、個人情報保護管理者へお問い合わせください。<br>
+
+
+
+
+                                                    <!--１.「お問い合わせフォーム」で取得した個人情報の利用目的<br>
+                                                    「お問い合わせフォーム」で取得した個人情報はお問い合わせ・ご意見に対する回答のみに利用し、それ以外の利用はいたしません。<br>
+                                                    <br>
+                                                    ２.個人情報の取扱いの委託<br>
+                                                    当社は、個人情報の処理など、業務の一部又は全てを外部に委託しています。外部に委託する際には、委託先選定基準を定め、十分な個人情報保護水準を満たしている委託先を選定しています。また、委託先と業務委託に関する秘密情報等保持契約書を締結し、個人情報の取扱いに関して必要かつ適切な安全管理を実施させています。<br>
+                                                    <br>
+                                                    ３.個人情報の開示等のご請求、お問合せ及び苦情受付先について<br>
+                                                    当社は、個人情報の開示、利用目的の通知、内容の訂正、追加または削除、利用の停止、消去または第三者への提供の停止のご請求、個人情報の取扱い、苦情および相談に関するお問合せ窓口を下記の通り設けております。お問合せいただいた際には、ご本人を確認させていただいたうえで合理的な期間内に対応いたします。<br>-->
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="input-terms__radio">
+                                            <div class="input-terms__radio-choice">
+                                                <input type="radio" name="terms" value="1;同意する" id="terms1"%terms1_checked%>
+                                                <label for="terms1">同意する</label>    
+                                            </div>
+                                            <div class="input-terms__radio-choice">
+                                                <input type="radio" name="terms" value="2;同意しない" id="terms2"%terms2_checked%>
+                                                <label for="terms2">同意しない</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="contact-form__btn">
+                                <button type="submit" class="contact-form__submit">確 認</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!--#include virtual="../inc/footer.html" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/lib/inview/jquery.inview.js"></script>
+    <script src="../assets/lib/slick/slick.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

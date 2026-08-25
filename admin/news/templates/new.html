@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/sub.css">
+	<link rel="stylesheet" href="../css/sub-add.css">
+	<title>管理画面</title>
+	<script type="text/javascript" src="../../assets/js/jquery-3.7.1.js"></script>
+	<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../js/news-new.js"></script>
+</head>
+
+<body>
+	<div id="overlay">
+	</div>
+	<form name="f" method="post" action="new.php">
+	<input type="hidden" name="confirm" value="on">
+	<input type="hidden" name="token" value="%token%">
+
+	<header class="content">
+		<div class="main-content">
+			<div id="header-l"><img src="../images/logo.jpg" width="250" height="46" border="0" /></div>
+
+			<div id="header-r">
+				<div id="logout"><a href="../index.php" class="bt-home">TOP</a><a href="../logout.php" class="bt-logout">LOGOUT</a></div>
+			</div>
+			<span class="clear">&nbsp;</span>
+		</div>
+	</header>
+
+	<section class="content">
+		<div class="main-content">
+			<p class="title">新着情報管理（日本語サイト）</p>
+
+			<p class="news-subtitle">新規登録</p>
+
+<!-- tmpl:ifdef %error% -->
+<p class="error">%error%</p>
+<!-- tmpl:endif -->
+
+			<table border="0" cellpadding="0" cellspacing="0" width="1000">
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">掲載日</td>
+
+				<td align="left" valign="middle" class="tb-body">
+					<input name="post_date" type="date" class="select-normal" style="width:140px" value="%post_date%">&nbsp;
+
+					<select name="post_hour" class="select-normal" style="width:60px">
+						<option value=""></option>
+						<option value="0"%post_hour_selected0%>0</option>
+						<option value="1"%post_hour_selected1%>1</option>
+						<option value="2"%post_hour_selected2%>2</option>
+						<option value="3"%post_hour_selected3%>3</option>
+						<option value="4"%post_hour_selected4%>4</option>
+						<option value="5"%post_hour_selected5%>5</option>
+						<option value="6"%post_hour_selected6%>6</option>
+						<option value="7"%post_hour_selected7%>7</option>
+						<option value="8"%post_hour_selected8%>8</option>
+						<option value="9"%post_hour_selected9%>9</option>
+						<option value="10"%post_hour_selected10%>10</option>
+						<option value="11"%post_hour_selected11%>11</option>
+						<option value="12"%post_hour_selected12%>12</option>
+						<option value="13"%post_hour_selected13%>13</option>
+						<option value="14"%post_hour_selected14%>14</option>
+						<option value="15"%post_hour_selected15%>15</option>
+						<option value="16"%post_hour_selected16%>16</option>
+						<option value="17"%post_hour_selected17%>17</option>
+						<option value="18"%post_hour_selected18%>18</option>
+						<option value="19"%post_hour_selected19%>19</option>
+						<option value="20"%post_hour_selected20%>20</option>
+						<option value="21"%post_hour_selected21%>21</option>
+						<option value="22"%post_hour_selected22%>22</option>
+						<option value="23"%post_hour_selected23%>23</option>
+					</select>&nbsp;時&nbsp;
+
+					<select name="post_min" class="select-normal" style="width:60px">
+						<option value=""></option>
+						<option value="00"%post_min_selected00%>00</option>
+						<option value="01"%post_min_selected01%>01</option>
+						<option value="02"%post_min_selected02%>02</option>
+						<option value="03"%post_min_selected03%>03</option>
+						<option value="04"%post_min_selected04%>04</option>
+						<option value="05"%post_min_selected05%>05</option>
+						<option value="06"%post_min_selected06%>06</option>
+						<option value="07"%post_min_selected07%>07</option>
+						<option value="08"%post_min_selected08%>08</option>
+						<option value="09"%post_min_selected09%>09</option>
+						<option value="10"%post_min_selected10%>10</option>
+						<option value="11"%post_min_selected11%>11</option>
+						<option value="12"%post_min_selected12%>12</option>
+						<option value="13"%post_min_selected13%>13</option>
+						<option value="14"%post_min_selected14%>14</option>
+						<option value="15"%post_min_selected15%>15</option>
+						<option value="16"%post_min_selected16%>16</option>
+						<option value="17"%post_min_selected17%>17</option>
+						<option value="18"%post_min_selected18%>18</option>
+						<option value="19"%post_min_selected19%>19</option>
+						<option value="20"%post_min_selected20%>20</option>
+						<option value="21"%post_min_selected21%>21</option>
+						<option value="22"%post_min_selected22%>22</option>
+						<option value="23"%post_min_selected23%>23</option>
+						<option value="24"%post_min_selected24%>24</option>
+						<option value="25"%post_min_selected25%>25</option>
+						<option value="26"%post_min_selected26%>26</option>
+						<option value="27"%post_min_selected27%>27</option>
+						<option value="28"%post_min_selected28%>28</option>
+						<option value="29"%post_min_selected29%>29</option>
+						<option value="30"%post_min_selected30%>30</option>
+						<option value="31"%post_min_selected31%>31</option>
+						<option value="32"%post_min_selected32%>32</option>
+						<option value="33"%post_min_selected33%>33</option>
+						<option value="34"%post_min_selected34%>34</option>
+						<option value="35"%post_min_selected35%>35</option>
+						<option value="36"%post_min_selected36%>36</option>
+						<option value="37"%post_min_selected37%>37</option>
+						<option value="38"%post_min_selected38%>38</option>
+						<option value="39"%post_min_selected39%>39</option>
+						<option value="40"%post_min_selected40%>40</option>
+						<option value="41"%post_min_selected41%>41</option>
+						<option value="42"%post_min_selected42%>42</option>
+						<option value="43"%post_min_selected43%>43</option>
+						<option value="44"%post_min_selected44%>44</option>
+						<option value="45"%post_min_selected45%>45</option>
+						<option value="46"%post_min_selected46%>46</option>
+						<option value="47"%post_min_selected47%>47</option>
+						<option value="48"%post_min_selected48%>48</option>
+						<option value="49"%post_min_selected49%>49</option>
+						<option value="50"%post_min_selected50%>50</option>
+						<option value="51"%post_min_selected51%>51</option>
+						<option value="52"%post_min_selected52%>52</option>
+						<option value="53"%post_min_selected53%>53</option>
+						<option value="54"%post_min_selected54%>54</option>
+						<option value="55"%post_min_selected55%>55</option>
+						<option value="56"%post_min_selected56%>56</option>
+						<option value="57"%post_min_selected57%>57</option>
+						<option value="58"%post_min_selected58%>58</option>
+						<option value="59"%post_min_selected59%>59</option>
+					</select>&nbsp;分
+
+					
+				</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">タイトル</td>
+
+				<td align="left" valign="top" class="tb-body"><input type="text" name="title" value="%title%" class="input-txt" style="width:740px" /></td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">表示期間</td>
+
+				<td align="left" valign="middle" class="tb-body">
+					<p class="setumei">指定された開始時に公開されます。終了日が指定されている場合は自動的に掲載されなくなります。<br>
+					（掲載終了後もデータは削除されず残ります。）</p>
+
+					<div class="mt10">
+						<input name="s_disp_date" type="date" class="select-normal" style="width:140px" value="%s_disp_date%">&nbsp;
+
+						<select name="s_disp_hour" class="select-normal" style="width:60px">
+							<option value=""></option>
+							<option value="0"%s_disp_hour_selected0%>0</option>
+							<option value="1"%s_disp_hour_selected1%>1</option>
+							<option value="2"%s_disp_hour_selected2%>2</option>
+							<option value="3"%s_disp_hour_selected3%>3</option>
+							<option value="4"%s_disp_hour_selected4%>4</option>
+							<option value="5"%s_disp_hour_selected5%>5</option>
+							<option value="6"%s_disp_hour_selected6%>6</option>
+							<option value="7"%s_disp_hour_selected7%>7</option>
+							<option value="8"%s_disp_hour_selected8%>8</option>
+							<option value="9"%s_disp_hour_selected9%>9</option>
+							<option value="10"%s_disp_hour_selected10%>10</option>
+							<option value="11"%s_disp_hour_selected11%>11</option>
+							<option value="12"%s_disp_hour_selected12%>12</option>
+							<option value="13"%s_disp_hour_selected13%>13</option>
+							<option value="14"%s_disp_hour_selected14%>14</option>
+							<option value="15"%s_disp_hour_selected15%>15</option>
+							<option value="16"%s_disp_hour_selected16%>16</option>
+							<option value="17"%s_disp_hour_selected17%>17</option>
+							<option value="18"%s_disp_hour_selected18%>18</option>
+							<option value="19"%s_disp_hour_selected19%>19</option>
+							<option value="20"%s_disp_hour_selected20%>20</option>
+							<option value="21"%s_disp_hour_selected21%>21</option>
+							<option value="22"%s_disp_hour_selected22%>22</option>
+							<option value="23"%s_disp_hour_selected23%>23</option>
+						</select>&nbsp;時&nbsp;
+
+						<select name="s_disp_min" class="select-normal" style="width:60px">
+							<option value=""></option>
+							<option value="00"%s_disp_min_selected00%>00</option>
+							<option value="01"%s_disp_min_selected01%>01</option>
+							<option value="02"%s_disp_min_selected02%>02</option>
+							<option value="03"%s_disp_min_selected03%>03</option>
+							<option value="04"%s_disp_min_selected04%>04</option>
+							<option value="05"%s_disp_min_selected05%>05</option>
+							<option value="06"%s_disp_min_selected06%>06</option>
+							<option value="07"%s_disp_min_selected07%>07</option>
+							<option value="08"%s_disp_min_selected08%>08</option>
+							<option value="09"%s_disp_min_selected09%>09</option>
+							<option value="10"%s_disp_min_selected10%>10</option>
+							<option value="11"%s_disp_min_selected11%>11</option>
+							<option value="12"%s_disp_min_selected12%>12</option>
+							<option value="13"%s_disp_min_selected13%>13</option>
+							<option value="14"%s_disp_min_selected14%>14</option>
+							<option value="15"%s_disp_min_selected15%>15</option>
+							<option value="16"%s_disp_min_selected16%>16</option>
+							<option value="17"%s_disp_min_selected17%>17</option>
+							<option value="18"%s_disp_min_selected18%>18</option>
+							<option value="19"%s_disp_min_selected19%>19</option>
+							<option value="20"%s_disp_min_selected20%>20</option>
+							<option value="21"%s_disp_min_selected21%>21</option>
+							<option value="22"%s_disp_min_selected22%>22</option>
+							<option value="23"%s_disp_min_selected23%>23</option>
+							<option value="24"%s_disp_min_selected24%>24</option>
+							<option value="25"%s_disp_min_selected25%>25</option>
+							<option value="26"%s_disp_min_selected26%>26</option>
+							<option value="27"%s_disp_min_selected27%>27</option>
+							<option value="28"%s_disp_min_selected28%>28</option>
+							<option value="29"%s_disp_min_selected29%>29</option>
+							<option value="30"%s_disp_min_selected30%>30</option>
+							<option value="31"%s_disp_min_selected31%>31</option>
+							<option value="32"%s_disp_min_selected32%>32</option>
+							<option value="33"%s_disp_min_selected33%>33</option>
+							<option value="34"%s_disp_min_selected34%>34</option>
+							<option value="35"%s_disp_min_selected35%>35</option>
+							<option value="36"%s_disp_min_selected36%>36</option>
+							<option value="37"%s_disp_min_selected37%>37</option>
+							<option value="38"%s_disp_min_selected38%>38</option>
+							<option value="39"%s_disp_min_selected39%>39</option>
+							<option value="40"%s_disp_min_selected40%>40</option>
+							<option value="41"%s_disp_min_selected41%>41</option>
+							<option value="42"%s_disp_min_selected42%>42</option>
+							<option value="43"%s_disp_min_selected43%>43</option>
+							<option value="44"%s_disp_min_selected44%>44</option>
+							<option value="45"%s_disp_min_selected45%>45</option>
+							<option value="46"%s_disp_min_selected46%>46</option>
+							<option value="47"%s_disp_min_selected47%>47</option>
+							<option value="48"%s_disp_min_selected48%>48</option>
+							<option value="49"%s_disp_min_selected49%>49</option>
+							<option value="50"%s_disp_min_selected50%>50</option>
+							<option value="51"%s_disp_min_selected51%>51</option>
+							<option value="52"%s_disp_min_selected52%>52</option>
+							<option value="53"%s_disp_min_selected53%>53</option>
+							<option value="54"%s_disp_min_selected54%>54</option>
+							<option value="55"%s_disp_min_selected55%>55</option>
+							<option value="56"%s_disp_min_selected56%>56</option>
+							<option value="57"%s_disp_min_selected57%>57</option>
+							<option value="58"%s_disp_min_selected58%>58</option>
+							<option value="59"%s_disp_min_selected59%>59</option>
+						</select>&nbsp;分&nbsp;&nbsp;～&nbsp;&nbsp;
+
+
+						<input name="e_disp_date" type="date" class="select-normal" style="width:140px" value="%e_disp_date%">&nbsp;
+
+						<select name="e_disp_hour" class="select-normal" style="width:60px">
+							<option value=""></option>
+							<option value="0"%e_disp_hour_selected0%>0</option>
+							<option value="1"%e_disp_hour_selected1%>1</option>
+							<option value="2"%e_disp_hour_selected2%>2</option>
+							<option value="3"%e_disp_hour_selected3%>3</option>
+							<option value="4"%e_disp_hour_selected4%>4</option>
+							<option value="5"%e_disp_hour_selected5%>5</option>
+							<option value="6"%e_disp_hour_selected6%>6</option>
+							<option value="7"%e_disp_hour_selected7%>7</option>
+							<option value="8"%e_disp_hour_selected8%>8</option>
+							<option value="9"%e_disp_hour_selected9%>9</option>
+							<option value="10"%e_disp_hour_selected10%>10</option>
+							<option value="11"%e_disp_hour_selected11%>11</option>
+							<option value="12"%e_disp_hour_selected12%>12</option>
+							<option value="13"%e_disp_hour_selected13%>13</option>
+							<option value="14"%e_disp_hour_selected14%>14</option>
+							<option value="15"%e_disp_hour_selected15%>15</option>
+							<option value="16"%e_disp_hour_selected16%>16</option>
+							<option value="17"%e_disp_hour_selected17%>17</option>
+							<option value="18"%e_disp_hour_selected18%>18</option>
+							<option value="19"%e_disp_hour_selected19%>19</option>
+							<option value="20"%e_disp_hour_selected20%>20</option>
+							<option value="21"%e_disp_hour_selected21%>21</option>
+							<option value="22"%e_disp_hour_selected22%>22</option>
+							<option value="23"%e_disp_hour_selected23%>23</option>
+						</select>&nbsp;時&nbsp;
+
+						<select name="e_disp_min" class="select-normal" style="width:60px">
+							<option value=""></option>
+							<option value="00"%e_disp_min_selected00%>00</option>
+							<option value="01"%e_disp_min_selected01%>01</option>
+							<option value="02"%e_disp_min_selected02%>02</option>
+							<option value="03"%e_disp_min_selected03%>03</option>
+							<option value="04"%e_disp_min_selected04%>04</option>
+							<option value="05"%e_disp_min_selected05%>05</option>
+							<option value="06"%e_disp_min_selected06%>06</option>
+							<option value="07"%e_disp_min_selected07%>07</option>
+							<option value="08"%e_disp_min_selected08%>08</option>
+							<option value="09"%e_disp_min_selected09%>09</option>
+							<option value="10"%e_disp_min_selected10%>10</option>
+							<option value="11"%e_disp_min_selected11%>11</option>
+							<option value="12"%e_disp_min_selected12%>12</option>
+							<option value="13"%e_disp_min_selected13%>13</option>
+							<option value="14"%e_disp_min_selected14%>14</option>
+							<option value="15"%e_disp_min_selected15%>15</option>
+							<option value="16"%e_disp_min_selected16%>16</option>
+							<option value="17"%e_disp_min_selected17%>17</option>
+							<option value="18"%e_disp_min_selected18%>18</option>
+							<option value="19"%e_disp_min_selected19%>19</option>
+							<option value="20"%e_disp_min_selected20%>20</option>
+							<option value="21"%e_disp_min_selected21%>21</option>
+							<option value="22"%e_disp_min_selected22%>22</option>
+							<option value="23"%e_disp_min_selected23%>23</option>
+							<option value="24"%e_disp_min_selected24%>24</option>
+							<option value="25"%e_disp_min_selected25%>25</option>
+							<option value="26"%e_disp_min_selected26%>26</option>
+							<option value="27"%e_disp_min_selected27%>27</option>
+							<option value="28"%e_disp_min_selected28%>28</option>
+							<option value="29"%e_disp_min_selected29%>29</option>
+							<option value="30"%e_disp_min_selected30%>30</option>
+							<option value="31"%e_disp_min_selected31%>31</option>
+							<option value="32"%e_disp_min_selected32%>32</option>
+							<option value="33"%e_disp_min_selected33%>33</option>
+							<option value="34"%e_disp_min_selected34%>34</option>
+							<option value="35"%e_disp_min_selected35%>35</option>
+							<option value="36"%e_disp_min_selected36%>36</option>
+							<option value="37"%e_disp_min_selected37%>37</option>
+							<option value="38"%e_disp_min_selected38%>38</option>
+							<option value="39"%e_disp_min_selected39%>39</option>
+							<option value="40"%e_disp_min_selected40%>40</option>
+							<option value="41"%e_disp_min_selected41%>41</option>
+							<option value="42"%e_disp_min_selected42%>42</option>
+							<option value="43"%e_disp_min_selected43%>43</option>
+							<option value="44"%e_disp_min_selected44%>44</option>
+							<option value="45"%e_disp_min_selected45%>45</option>
+							<option value="46"%e_disp_min_selected46%>46</option>
+							<option value="47"%e_disp_min_selected47%>47</option>
+							<option value="48"%e_disp_min_selected48%>48</option>
+							<option value="49"%e_disp_min_selected49%>49</option>
+							<option value="50"%e_disp_min_selected50%>50</option>
+							<option value="51"%e_disp_min_selected51%>51</option>
+							<option value="52"%e_disp_min_selected52%>52</option>
+							<option value="53"%e_disp_min_selected53%>53</option>
+							<option value="54"%e_disp_min_selected54%>54</option>
+							<option value="55"%e_disp_min_selected55%>55</option>
+							<option value="56"%e_disp_min_selected56%>56</option>
+							<option value="57"%e_disp_min_selected57%>57</option>
+							<option value="58"%e_disp_min_selected58%>58</option>
+							<option value="59"%e_disp_min_selected59%>59</option>
+						</select>&nbsp;分
+
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">カテゴリー</td>
+
+				<td align="left" valign="middle" class="tb-body">
+					<div class="mt10">
+						<select name="category" class="select-normal" style="width:200px">
+							<option value="">選択してください</option>
+							<option value="1;文書保管"%category_selected1%>文書保管</option>
+							<option value="2;営業倉庫"%category_selected2%>営業倉庫</option>
+							<option value="3;不動産賃貸"%category_selected3%>不動産賃貸</option>
+							<option value="4;電子化"%category_selected4%>電子化</option>
+							<option value="5;採用"%category_selected5%>採用</option>
+							<option value="6;お知らせ"%category_selected6%>お知らせ</option>
+							<option value="7;システム"%category_selected7%>システム</option>
+							<option value="8;その他"%category_selected8%>その他</option>
+							<option value="9;NEWS"%category_selected9%>NEWS</option>
+							<option value="101;トランクルーム"%category_selected101%>トランクルーム</option>
+							<option value="102;松戸営業所"%category_selected102%>松戸営業所</option>
+							<option value="103;川崎営業所"%category_selected103%>川崎営業所</option>
+							<option value="104;板橋営業所"%category_selected104%>板橋営業所</option>
+							<option value="105;足立営業所"%category_selected105%>足立営業所</option>
+							<option value="106;柏事業所"%category_selected106%>柏事業所</option>
+							<option value="107;月島事業所"%category_selected107%>月島事業所</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">固定表示</td>
+
+				<td align="left" valign="middle" class="tb-body">
+					<p class="setumei">ここにチェックを入れた場合、指定終了日までは常にユーザー画面の最上部に表示されます。<br>
+					（固定表示が複数ある場合は、掲載日が新しいものがより上に表示されます。）</p>
+
+					<table border="0" cellpadding="0" cellspacing="0" class="mt10">
+					<tr>
+						<td align="left" valign="middle"><input type="radio" name="fixed_disp" id="fixed_disp0" value="0;しない"%fixed_disp_checked0% /><label for="fixed_disp0">しない</label></td>
+
+						<td align="left" valign="middle">
+							<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td align="left" valign="middle"><input type="radio" name="fixed_disp" id="fixed_disp1" value="1;する"%fixed_disp_checked1% class="ml40" /><label for="fixed_disp1">する</label></td>
+
+								<td align="left" valign="middle">（掲載期限&nbsp;<input name="fixed_disp_date" type="date" class="select-normal" style="width:140px" value="%fixed_disp_date%" />&nbsp;まで）
+								</td>
+							</tr>
+							</table>
+						</td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">表示形態</td>
+
+				<td align="left" valign="top" class="tb-body">
+					<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="left" valign="top"><input type="radio" name="format" id="format1" value="1;本文あり"%format_checked1% /><span class="ml5"><label for="format1">本文あり</label></span></td>
+					</tr>
+
+					<tr>
+						<td align="left" valign="top">
+							<div class="mt10">
+								<input type="radio" name="format" id="format2" value="2;本文無し（添付ファイル表示）" %format_checked2% />
+								<span class="ml5"><label for="format2">本文無し（添付ファイル表示）</label></span>
+								<span class="ml5"><input type="file" name="file_only_file" hidden />
+									<input type="hidden" name="file_only_savename" value="%file_only_savename%" />
+									<input type="text" name="file_only_dispname" id="file_only_dispname" value="%file_only_dispname%"
+										class="input-txt" style="width:600px" readonly />&nbsp;<a href="javascript:void(0);"
+										class="bt-sentaku">ファイル選択</a>&nbsp;<a href="javascript:void(0);" id="file_only_del" class="bt-kaijo"
+										style="display:none;">消</a></span>
+							</div>
+							<div id="file_only_progress_div" class="mt5"><label for="file_only_progress">アップロード中...</label><progress
+									id="file_only_progress" max="100" value="0">0%</progress></div>
+						</td>
+					</tr>
+
+					<tr>
+						<td align="left" valign="top">
+							<div class="mt10"><input type="radio" name="format" id="format3" value="3;本文無し（リンクのみ）"%format_checked3% /><span class="ml5"><label for="format3">本文無し（リンクのみ）</label></span><span class="ml5"><input type="text" name="link_only_url" value="%link_only_url%" required placeholder="URL入力" class="input-txt" style="width:530px" /></span></div>
+						</td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="news-tb-title">本文</td>
+
+				<td align="left" valign="top" class="tb-body">
+					<textarea name="body" id=""  class="ckeditor input-comment" rows="20" style="width:750px">%body%</textarea>
+				</td>
+			</tr>
+			</table>
+
+			<div class="fm-btn"><a href="javascript:void(0);" onclick="f.submit();return false;" class="btn-touroku">確　認</a></div>
+
+			<p class="back"><a href="../index.php" class="line">トップへ戻る</a></p>
+
+		</div>
+	</section>
+
+	</form>
+</body>
+
+</html>

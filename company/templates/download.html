@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" class="top">
+<head>
+    <title>資料ダウンロード | 旭倉庫株式会社</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/header.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/footer.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/page/company.css">
+
+    <!-- ファビコン -->
+    <link rel="icon" sizes="150x150" href="../assets/img/app-icon.png">
+    <link rel="apple-touch-icon" sizes="150x150"  href="../assets/img/app-icon.png">
+    
+    <!--#include virtual="../inc/ga.html" -->
+</head>
+<body id="page-download" class="page-type1">
+    <!--#include virtual="../inc/header.html" -->
+    <main id="site-content">
+        <div class="site-content-inner">
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">HOME</a></li>
+                        <li class="breadcrumb__item"><a href="./index.html" class="breadcrumb__link">企業情報</a></li>
+                        <li class="breadcrumb__item">資料ダウンロード</li>
+                    </ul>
+                </div>
+                <div class="h1-type1 ver2">
+                    <h1 class="h1-type1__ja">資料ダウンロード</h1>
+                    <div class="h1-type1__en">Catalog Download</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <section class="download-files">
+                    <div class="download-files__inner">
+                        <ul class="download-files__list">
+<!-- tmpl:loop %loop% -->
+                            <li class="download-files__item">
+                                <a href="viewfile.php?id=%catalog_id%" target="_blank" class="download-files__link">
+                                    <figure class="download-files__figure">
+                                        <img src="../func/viewimage.php?d=dl&f=%cover_savename%" alt="" class="download-files__img">
+                                    </figure>
+                                    <div class="download-files__text">%title%</div>
+                                </a>
+                            </li>
+<!-- tmpl:endloop %loop% -->
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!--#include virtual="../inc/footer.html" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/lib/inview/jquery.inview.js"></script>
+    <script src="../assets/lib/slick/slick.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
+</li></div></li>

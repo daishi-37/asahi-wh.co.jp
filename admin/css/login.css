@@ -1,0 +1,97 @@
+html, body {height: 100%;}
+
+h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd,
+img {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body	{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	min-width: 260px;  /*中央配置するボックスの横幅*/
+	min-height: 307px;  /*中央配置するボックス縦幅*/
+	background-color: #ffffff;
+	color: #333333;
+}
+
+#centerMiddle	{
+	margin: -200px 0 0 -200px;  /*縦横の半分をネガティブマージンでずらす*/
+	position: absolute;  /*body要素に対して絶対配置*/
+	top: 50%;  /*上端を中央に*/
+	left: 55%;  /*左端を中央に*/
+	width: 265px;  /*横幅*/
+	height: 400px;  /*縦幅*/
+	background-color: #ffffff;
+}
+
+a {
+	color:#0063c2;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #d00000;
+	text-decoration: underline;
+}
+
+#logo	{
+	text-align: center;
+}
+
+#login-id	{
+	text-align: center;
+	margin-top: 30px;
+}
+
+#login-pass	{
+	text-align: center;
+}
+
+.main-title	{
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.title	{
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+.input-box	{
+	font-size: 16px;
+	border: none;
+	background: #ededed;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+#login	{
+	display: block;
+	text-align: center;
+	margin-top: 30px;
+}
+
+a.bt-login  {
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-weight: bold;
+	background-color: #222222;
+}
+
+a:hover.bt-login  {
+	text-decoration: none;
+	background-color: #999999;
+}

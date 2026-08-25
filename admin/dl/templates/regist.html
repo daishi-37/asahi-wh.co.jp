@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/sub.css">
+	<link rel="stylesheet" href="../css/sub-add.css">
+	<title>管理画面</title>
+	<script type="text/javascript" src="../../assets/js/jquery-3.7.1.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../js/catalog-edit.js"></script>
+</head>
+
+<body>
+	<div id="overlay">
+	</div>
+	<form name="f" method="post" action="regist.php">
+	<input type="hidden" name="regist" value="on">
+	<input type="hidden" name="token" value="%token%">
+	
+	<header class="content">
+		<div class="main-content">
+			<div id="header-l"><img src="../images/logo.jpg" width="250" height="46" border="0" /></div>
+
+			<div id="header-r">
+				<div id="logout"><a href="../index.php" class="bt-home">TOP</a><a href="../logout.php" class="bt-logout">LOGOUT</a></div>
+			</div>
+			<span class="clear">&nbsp;</span>
+		</div>
+	</header>
+
+	<section class="content">
+		<div class="main-content">
+			<p class="title">資料ダウンロード管理（日本語サイト）</p>
+
+<!-- tmpl:ifdef %error% -->
+<p class="error">%error%</p>
+<!-- tmpl:endif -->
+
+<!-- tmpl:loop %loop% -->
+			<p class="dl-subtitle">%seq%<!-- 01 --></p>
+			<table border="0" cellpadding="0" cellspacing="0" width="1000">
+			<tr>
+				<td align="left" valign="middle" class="dl-tb-title">PDFファイル</td>
+
+				<td align="left" valign="middle" class="tb-body">
+<!-- tmpl:ifdef %contents_exists% -->
+					<p class="setumei">%old_contents_dispname%</p>
+<!-- tmpl:endif -->
+
+					<div>
+						<input type="file" name="contents_file%seq%" accept="application/pdf" hidden>
+						<input type="hidden" name="contents_savename%seq%" value="%contents_savename%">
+						<input type="text" name="contents_dispname%seq%" value="%contents_dispname%" class="input-txt" style="width:600px" readonly />
+						&nbsp;<a href="javascript:void(0);" class="bt-sentaku">ファイル選択</a>
+						&nbsp;<a href="javascript:void(0);" class="bt-kaijo" style="display:none;">消</a>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="dl-tb-title">表紙</td>
+
+				<td align="left" valign="top" class="tb-body">
+<!-- tmpl:ifdef %cover_exists% -->
+					<div><img src="../../func/viewimage.php?d=dl&f=%old_cover_savename%" width="180" alt="" /></div>
+<!-- tmpl:endif -->
+
+					<div>
+						<input type="file" name="cover_file%seq%" accept="image/jpeg, image/png, image/gif" hidden>
+						<input type="hidden" name="cover_savename%seq%" value="%cover_savename%">
+						<input type="text" name="cover_dispname%seq%" value="%cover_dispname%" class="input-txt" style="width:600px" readonly />
+						&nbsp;<a href="javascript:void(0);" class="bt-sentaku">ファイル選択</a>
+						&nbsp;<a href="javascript:void(0);" class="bt-kaijo" style="display:none;">消</a>
+					</div>
+
+					<p class="comment-txt">※ 画像ファイルは「.jpg」「.png」「.gif」が登録できます。</p>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="dl-tb-title">タイトル</td>
+
+				<td align="left" valign="top" class="tb-body"><input type="text" name="title%seq%" value="%title%" class="input-txt" style="width:300px" /></td>
+			</tr>
+<!-- tmpl:ifdef %data_exists% -->
+			<tr>
+				<td align="left" valign="middle" class="dl-tb-title">削除</td>
+
+				<td align="left" valign="top" class="tb-body"><input type="checkbox" name="catalog_del%seq%" id="catalog_del%seq%" value="on"%catalog_del_checked% /><label for="catalog_del%seq%">このカタログを削除</label></td>
+			</tr>
+<!-- tmpl:endif -->
+			</table>
+<!-- tmpl:endloop %loop% -->
+
+			<div class="fm-btn"><a href="javascript:void(0);" onclick="f.submit();return false;" class="btn-touroku">更　新</a></div>
+
+			<p class="back"><a href="../index.php" class="line">トップへ戻る</a></p>
+
+		</div>
+	</section>
+
+	</form>
+</body>
+
+</html>

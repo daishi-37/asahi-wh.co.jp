@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/sub.css">
+	<link rel="stylesheet" href="../css/sub-add.css">
+	<title>管理画面</title>
+
+</head>
+
+<body>
+	<form name="f" method="post" action="regist.php">
+	<input type="hidden" name="confirm" value="on">
+	<input type="hidden" name="token" value="%token%">
+	
+	<header class="content">
+		<div class="main-content">
+			<div id="header-l"><img src="../images/logo.jpg" width="250" height="46" border="0" /></div>
+
+			<div id="header-r">
+				<div id="logout"><a href="../index.php" class="bt-home">TOP</a><a href="../logout.php" class="bt-logout">LOGOUT</a></div>
+			</div>
+			<span class="clear">&nbsp;</span>
+		</div>
+	</header>
+
+	<section class="content">
+		<div class="main-content">
+			<p class="title">採用案内管理（日本語サイト）</p>
+
+<!-- tmpl:ifdef %error% -->
+<p class="error">%error%</p>
+<!-- tmpl:endif -->
+
+			<p class="rec-subtitle">リクナビバナーの表示</p>
+			<table border="0" cellpadding="0" cellspacing="0" width="1000" class="mb40">
+			<tr>
+				<td align="left" valign="middle" class="rec-tb-title">バナー</td>
+
+				<td align="left" valign="middle" class="tb-body">
+					<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="120" align="left" valign="middle"><input type="radio" name="banner_disp" id="banner_disp1" value="1;表示"%banner_disp_checked1% /><label for="banner_disp1">表示</label></td>
+
+						<td align="left" valign="middle"><input type="radio" name="banner_disp" id="banner_disp0" value="0;非表示"%banner_disp_checked0% /><label for="banner_disp0">非表示</label></td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="left" valign="middle" class="rec-tb-title">リンク先URL</td>
+
+				<td align="left" valign="middle" class="tb-body"><input type="text" name="link_url" value="%link_url%" class="input-txt" style="width:680px" /></td>
+			</tr>
+			</table>
+
+
+			<p class="rec-subtitle">採用案内ページの表示</p>
+			<table border="0" cellpadding="0" cellspacing="0" width="1000">
+			<tr>
+				<td align="left" valign="middle" class="rec-tb-title">募集内容</td>
+
+				<td align="left" valign="middle" class="tb-body">
+					<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="120" align="left" valign="middle"><input type="radio" name="publish" id="publish1" value="1;掲載中"%publish_checked1% /><label for="publish1">掲載中</label></td>
+
+						<td align="left" valign="middle"><input type="radio" name="publish" id="publish0" value="0;非掲載"%publish_checked0% /><label for="publish0">非掲載</label></td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+<!-- tmpl:loop %loop% -->
+			<tr>
+				<td align="left" valign="middle" class="rec-tb-title"><input type="text" name="item_name%seq%" value="%item_name%" class="input-txt" style="width:220px" /></td>
+
+				<td align="left" valign="middle" class="tb-body">
+					<textarea name="item_contents%seq%" id=""  class="input-comment" rows="5" style="width:680px">%item_contents%</textarea>
+				</td>
+			</tr>
+<!-- tmpl:endloop %loop% -->
+
+			<tr>
+				<td align="left" valign="middle" class="rec-tb-title-ref"><input type="text" name="ref_url_name" value="%ref_url_name%" class="input-txt" style="width:220px" /></td>
+
+				<td align="left" valign="middle" class="rec-tb-body-ref"><input type="text" name="ref_url" value="%ref_url%" class="input-txt" style="width:680px" placeholder="参照URLを入力してください" /></td>
+			</tr>
+			</table>
+
+
+			<div class="fm-btn"><a href="javascript:void(0);" onclick="f.submit();return false;" class="btn-touroku">確　認</a></div>
+
+			<p class="back"><a href="../index.php" class="line">トップへ戻る</a></p>
+
+		</div>
+	</section>
+
+	</form>
+</body>
+
+</html>

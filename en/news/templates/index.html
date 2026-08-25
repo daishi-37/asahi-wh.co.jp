@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" class="top">
+<head>
+    <title>News | Asahi Warehouse Co.,ltd</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/header.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/footer.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/style-add.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/page/news.css">
+
+    <!-- ファビコン -->
+    <link rel="icon" sizes="150x150" href="../assets/img/app-icon.png">
+    <link rel="apple-touch-icon" sizes="150x150"  href="../assets/img/app-icon.png">
+
+    <!--#include virtual="../inc/ga.html" -->
+</head>
+<body id="page-news" class="page-type1">
+    <!--#include virtual="../inc/header.html" -->
+    <main id="site-content">
+        <div class="site-content-inner">
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="../" class="breadcrumb__link">HOME</a></li>
+                        <li class="breadcrumb__item">NEWS</li>
+                    </ul>
+                </div>
+                <div class="h1-type1 ver2">
+                    <h1 class="h1-type1__ja">NEWS</h1>
+                    <div class="h1-type1__en">NEWS</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <section class="news-posts">
+                    <div class="news-posts__inner">
+<!-- tmpl:ifndef %wnew_nothing% -->
+                        <div class="news-category">
+                            <div class="news-category__select-wrap">
+                                <select name="category" id="category" class="news-category__select">
+                                    <option value="">Show all categories</option>
+                                    <option value="1"%category_selected1%>Document Storage</option>
+                                    <option value="2"%category_selected2%>Public Warehouse</option>
+                                    <option value="3"%category_selected3%>Real Estate Leasing</option>
+                                    <option value="4"%category_selected4%>Digitization</option>
+                                    <option value="5"%category_selected5%>Careers</option>
+                                    <option value="6"%category_selected6%>Announcements</option>
+                                    <option value="7"%category_selected7%>System</option>
+                                    <option value="8"%category_selected8%>Other</option>
+                                    <option value="9"%category_selected9%>NEWS</option>
+                                    <option value="101"%category_selected101%>Self-Storage</option>
+                                    <option value="102"%category_selected102%>Matsudo Sales Office</option>
+                                    <option value="103"%category_selected103%>Kawasaki Sales Office</option>
+                                    <option value="104"%category_selected104%>Itabashi Sales Office</option>
+                                    <option value="105"%category_selected105%>Adachi Sales Office</option>
+                                    <option value="106"%category_selected106%>Kashiwa Office</option>
+                                    <option value="107"%category_selected107%>Tsukishima Office</option>
+                                    </select>
+                            </div>
+                        </div>
+<!-- tmpl:endif -->
+                        <div class="posts-type3">
+<!-- tmpl:ifdef %wnew_nothing% -->
+                            <p class="posts-type3__nothing">Coming Soon!</p>
+<!-- tmpl:else -->
+                            <ul class="posts-type3__list">
+<!-- tmpl:loop %wnew_loop% -->
+                                <li class="posts-type3__item">
+                                    <a href="detail.php?id=%wnew_serial%"%wnew_target% class="posts-type3__link">
+                                        <div class="posts-type3__category">%wnew_category%</div>
+                                        <div class="posts-type3__date">%wnew_post_date%</div>
+                                        <div class="posts-type3__title">%wnew_title%</div>
+                                    </a>
+                                </li>
+<!-- tmpl:endloop %wnew_loop% -->
+                            </ul>
+<!-- tmpl:endif -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!--#include virtual="../inc/footer.html" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/lib/inview/jquery.inview.js"></script>
+    <script src="../assets/lib/slick/slick.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/news.js"></script>
+</body>
+</html>

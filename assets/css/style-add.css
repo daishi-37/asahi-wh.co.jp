@@ -1,0 +1,14 @@
+.contact-form__color-red {
+    color: var(--red);
+    width: auto;
+    padding: 0 0 32px 20px;
+    font-size: 16px;
+    line-height: calc(32 / 16);
+}
+
+.posts-type3__nothing {
+    font-size: 18px;
+    line-height: calc(22 / 14);
+    text-align: center;
+    padding-top: 30px;
+}

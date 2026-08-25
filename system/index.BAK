@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" class="top">
+<head>
+    <title>WEB照会システム | 旭倉庫株式会社</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/header.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/footer.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/page/system.css">
+
+
+    <!-- アイコン未設定 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="Shortcut Icon" type="image/x-icon" href="favicon.ico">
+    -->
+</head>
+<body id="page-system" class="page-type1">
+    <!--#include virtual="../inc/header.html" -->
+    <main id="site-content">
+        <div class="site-content-inner">
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">HOME</a></li>
+                        <li class="breadcrumb__item">WEB照会システム</li>
+                    </ul>
+                </div>
+                <div class="h1-type1 ver2">
+                    <h1 class="h1-type1__ja">WEB照会システム</h1>
+                    <div class="h1-type1__en">Web Inquiry System</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <section class="system-overview">
+                    <div class="system-overview__inner">
+                        <div class="system-overview__text">WEB照会システムは、弊社でお預かりしているお客様の寄託貨物および保管文書の在庫数量と<br class="pc_only">受払状況をインターネットを利用して照会したり、データのダウンロード等ができるシステムです。</div>
+                        <p class="system-overview__p">事前の登録が必要ですので、<br class="sp_only">詳細は営業担当までお問合せください。</p>
+                        <div class="system-overview__btn">
+                            <a href="../contact/" class="system-overview__link">お問合せ</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="system-system">
+                    <div class="system-system__inner">
+                        <ul class="sytstem-system__list">
+                            <li class="system-system__item">
+                                <figure class="system-system__figure">
+                                    <img src="../assets/img/business/web_system/01.png" alt="" class="system-system__img">
+                                </figure>
+                                <div class="system-system__h2">在庫管理WEBシステム</div>
+                                <div class="system-system__text">リアルタイム在庫照会システムで信頼の在庫管理。<br>24時間365日 最新の在庫状況を確認し、データのダウンロードを行う事ができます。</div>
+                                <div class="system-system__btn">
+                                    <a href="" class="system-system__link">ログイン画面へ</a>
+                                </div>
+                            </li>
+                            <li class="system-system__item">
+                                <figure class="system-system__figure">
+                                    <img src="../assets/img/business/web_system/02.png" alt="" class="system-system__img">
+                                </figure>
+                                <div class="system-system__h2">文書管理WEBシステム</div>
+                                <div class="system-system__text">お預かりしてる文書箱の在庫照会や各種オーダー（入庫、出庫、廃棄、閲覧、保存箱注文、通過廃棄）が可能なシステムです。<br>またお預かり前の社内保管文書の登録や在庫データのダウンロードを行う事ができます。</div>
+                                <div class="system-system__btn">
+                                    <a href="" class="system-system__link">ログイン画面へ</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!--#include virtual="../inc/footer.html" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/lib/inview/jquery.inview.js"></script>
+    <script src="../assets/lib/slick/slick.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

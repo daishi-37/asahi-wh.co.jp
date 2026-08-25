@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" class="top">
+<head>
+    <title>お問い合わせ | 旭倉庫株式会社</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/header.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/footer.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/page/contact.css">
+
+
+    <!-- ファビコン -->
+    <link rel="icon" sizes="150x150" href="../assets/img/app-icon.png">
+    <link rel="apple-touch-icon" sizes="150x150"  href="../assets/img/app-icon.png">
+    
+    <!--#include virtual="../inc/ga.html" -->
+</head>
+<body id="page-contact" class="page-type1">
+    <!--#include virtual="../inc/header.html" -->
+    <main id="site-content">
+        <div class="site-content-inner">
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">HOME</a></li>
+                        <li class="breadcrumb__item">お問い合わせ</li>
+                    </ul>
+                </div>
+                <div class="h1-type1">
+                    <h1 class="h1-type1__ja">お問い合わせ</h1>
+                    <div class="h1-type1__en">Contact</div>
+                    <div class="h1-type1__text">以下の内容でよろしければ 「 送信 」 ボタンを押してください。</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <section class="contact-input contact-form">
+                    <form action="./confirm.php" method="post">
+                    <input type="hidden" name="token" value="%token%">
+                        <div class="contact-form__inner">
+                            <ul class="contact-form__table">
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th">
+                                        お問い合わせ種別
+                                    </div>
+                                    <div class="contact-form__text">
+                                        <p>%category%</p>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th ">
+                                        ご氏名
+                                    </div>
+                                    <div class="contact-form__text">
+                                        <p>%name%</p>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th">
+                                        会社名
+                                    </div>
+                                    <div class="contact-form__text">
+                                        <p>%company%</p>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th">
+                                        所在地
+                                    </div>
+                                    <div class="contact-form__text">
+                                        <p>
+                                            %postcode%<br>
+                                            %pref%<br>
+                                            %address%
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th">
+                                        ご担当部署
+                                    </div>
+                                    <div class="contact-form__text">
+                                        <p>%department%</p>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th">
+                                        メールアドレス
+                                    </div>
+                                    <div class="contact-form__text">
+                                        <p>%email%</p>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th">
+                                        ご連絡先
+                                    </div>
+                                    <div class="contact-form__text input-telephone">
+                                        <p>%telephone1%-%telephone2%-%telephone3%</p>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th">
+                                        問い合わせ内容
+                                    </div>
+                                    <div class="contact-form__text">
+                                        <p>%content%</p>
+                                    </div>
+                                </li>
+                                <li class="contact-form__item">
+                                    <div class="contact-form__th">
+                                        個人情報について
+                                    </div>
+                                    <div class="contact-form__text">
+                                        <p>%terms%</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="contact-form__btn">
+                                <button type="submit" class="contact-form__submit">送 信</button>
+                                <a href="javascript:history.back()" class="contact-form__back">＜ 前の画面へ戻る</a>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!--#include virtual="../inc/footer.html" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/lib/inview/jquery.inview.js"></script>
+    <script src="../assets/lib/slick/slick.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

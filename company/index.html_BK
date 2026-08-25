@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" class="top">
+<head>
+    <title>会社概要 | 旭倉庫株式会社</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/header.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/parts/footer.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/page/company.css">
+
+    <!-- ファビコン -->
+    <link rel="icon" sizes="150x150" href="../assets/img/app-icon.png">
+    <link rel="apple-touch-icon" sizes="150x150"  href="../assets/img/app-icon.png">
+    
+    <!--#include virtual="../inc/ga.html" -->
+</head>
+<body id="page-company" class="page-type1">
+    <!--#include virtual="../inc/header.html" -->
+    <main id="site-content">
+        <div class="site-content-inner">
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">HOME</a></li>
+                        <li class="breadcrumb__item">会社概要</li>
+                    </ul>
+                </div>
+                <div class="h1-type1 ver2">
+                    <h1 class="h1-type1__ja">会社概要</h1>
+                    <div class="h1-type1__en">Company Overview</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="company-greeting">
+                    <div class="company-greeting__inner">
+                        <div class="company-greeting__figure">
+                            <img src="../assets/img/company/01.png" alt="" class="company-greeting__img">
+                        </div>
+                    </div>
+                </div>
+                <section class="company-overview">
+                    <div class="company-overview__inner">
+                        <div class="table-type1">
+                            <table class="table-type1__table">
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">名称</th>
+                                    <td class="table-type__td">旭倉庫株式会社</td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">創立</th>
+                                    <td class="table-type__td">1918年（大正7年）11月28日</td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">本社所在地</th>
+                                    <td class="table-type__td">〒104-0052　<br class="sp_only">東京都中央区月島1丁目14番7号</td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">TEL/FAX</th>
+                                    <td class="table-type__td">TEL: 03-3531-3111　　<br class="sp_only">FAX: 03-3531-0296</td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">営業所</th>
+                                    <td class="table-type__td">
+                                        月島事業所<br>
+                                        川崎営業所<br>
+                                        松戸営業所<br>
+                                        板橋営業所<br>
+                                        足立営業所<br>
+                                        柏事業所<br>
+                                        アサヒレインボースクエア
+                                    </td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">代表者</th>
+                                    <td class="table-type__td">取締役社長　渡辺貫治</td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">資本金</th>
+                                    <td class="table-type__td">6,400万円（令和5年12月1日現在）</td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">売上高</th>
+                                    <td class="table-type__td">15億円（令和5年11月期）</td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">従業員数</th>
+                                    <td class="table-type__td">52名（令和5年12月1日現在）</td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">取引銀行</th>
+                                    <td class="table-type__td">
+                                        三菱ＵＦＪ銀行：月島支店　築地支店<br>
+                                        三井住友銀行　：新橋支店　築地支店<br>
+                                        みずほ銀行　　：深川支店・築地支店<br>
+                                    </td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">決算期</th>
+                                    <td class="table-type__td">11月（年1回）</td>
+                                </tr>
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">事業内容</th>
+                                    <td class="table-type__td">倉庫業および付帯する事業／運送取扱業／通関手続代行業/不動産賃貸および管理業</td>
+                                </tr>
+                                <!--
+                                <tr class="table-type__row">
+                                    <th class="table-type__th">関連会社</th>
+                                    <td class="table-type__td">旭運輸株式会社</td>
+                                </tr>
+                                -->
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                <section class="company-message">
+                    <div class="company-message__inner">
+                        <div class="h2-type3">
+                            <h2 class="h2-type3__h2">社長メッセージ</h2>
+                        </div>
+                        <div class="company-message__box">
+                            <div class="company-message__title">私たちは、以下の３点をモットーとしています。</div>
+                            <ul class="company-message__lists">
+                                <li class="company-message__list">社員と社員の家族が「誇りに思える会社」であることを常に目指しています。</li>
+                                <li class="company-message__list">社員と社員の家族がゆとりを持った「豊かな人生」を送ることができる会社であることを常に目指しています。</li>
+                                <li class="company-message__list">社員全員が「明るく、元気に、前向きに」仕事ができる環境であることを常に目指しています。</li>
+                            </ul>
+                            <div class="company-message__sign"><p>旭倉庫株式会社<br>　取締役社長 渡辺 貫治</p></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="company-access access-type1">
+                    <div class="access-type1__inner">
+                        <div class="access-type1__left">
+                            <div class="access-type1__h2">
+                                <h2 class="access-type1__h2-ja">アクセス</h2>
+                                <div class="access-type1__h2-en">ACCESS</div>
+                            </div>
+                            <div class="access-type1__name">本社・月島事業所</div>
+                        </div>
+                        <div class="access-type1__right">
+                            <div class="access-type1__info">
+                                <div class="access-type1__address">〒104-0052　東京都中央区月島1丁目14番7号</div>
+                                <div class="access-type1__tel">TEL：<span>03-3531-3111</span><span class="small">(代表)</span></div>
+                                <div class="access-type1__fax">FAX：<span>03-3531-0296</span></div>
+                                <div class="access-type1__train">東京メトロ有楽町線・都営地下鉄大江戸線「月島駅」下車。<br class="pc_only">７番出口から徒歩３分</div>
+                                <div class="access-type1__car">首都高速新富町ランプより5分</div>
+                            </div>
+                            <div class="access-type1__map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6482.90634662718!2d139.782426!3d35.665842!3m2!1i1024!2i768!4f10!3m3!1m2!1s0x60188965437f624d%3A0x7ccafdb9e9fe8ac3!2z5pet5YCJ5bqr44ix!5e0!3m2!1sja!2sjp!4v1718004327816!5m2!1sja!2sjp"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!--#include virtual="../inc/footer.html" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/lib/inview/jquery.inview.js"></script>
+    <script src="../assets/lib/slick/slick.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

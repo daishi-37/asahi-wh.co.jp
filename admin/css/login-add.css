@@ -1,0 +1,16 @@
+#login-err	{
+	color: red;
+	text-align: center;
+	margin-top: 30px;
+}
+.login-form__submit {
+    margin: 0 auto;
+    display: block;
+    width: 185px;
+    height: 41px;
+    border: none;
+    background-color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+}

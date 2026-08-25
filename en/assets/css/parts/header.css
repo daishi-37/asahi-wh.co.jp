@@ -1,0 +1,649 @@
+@charset "utf-8";
+
+/****************************************************/
+/* header                                           */
+/****************************************************/
+#dummy-header {
+    height: var(--height__header);
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: var(--height__header);
+    color: var(--white);
+    background-color: var(--black);
+    z-index: var(--zindex__header);
+}
+
+.header a {
+    color: var(--white);
+}
+
+.header__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ロゴ */
+.header__logo {
+    width: 210px;
+    margin-left: 60px;
+    margin-right: auto;
+}
+
+/* Gメニュー @@@ENGLISHボタン表示時に削除 */
+.header__navi {
+    padding-right: 30px;
+}
+
+/* 言語 */
+.header__languege {
+    padding-right: 30px;
+}
+
+.header__languege-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__languege-link img {
+    display: block;
+    width: 22px;
+    padding-right: 9px;
+}
+
+.header__languege-link span {
+    font-family: var(--font-roboto);
+    font-size: 18px;
+    font-weight: var(--font-weight__bold);
+}
+
+/* お問い合わせ */
+.header__contact {
+    width: 260px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+}
+
+.header__contact-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__contact-tel {
+    position: relative;
+    padding-right: 23px;
+}
+
+.header__contact-tel::after {
+    content: """";
+    width: 1px;
+    height: 51px;
+    background-color: var(--white);
+    right: 0;
+    top: 5px;
+    position: absolute;
+}
+
+.header__contact-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__contact-title img {
+    display: block;
+    width: 17px;
+    margin-right: 3px;
+}
+
+.header__contact-title span {
+    display: block;
+    font-size: 14px;
+    font-weight: var(--font-weight__bold);
+    line-height: 1;
+}
+
+.header__contact-number {
+    text-align: center;
+    font-size: 22px;
+    font-weight: var(--font-weight__bold);
+    font-family: var(--font-roboto);
+    line-height: 1;
+    padding-top: 2px;
+    padding-bottom: 1px;
+}
+
+.header__contact-open {
+    font-size: 12px;
+    text-align: center;
+    font-weight: var(--font-weight__bold);
+    line-height: calc(14 / 12);
+}
+
+.header__contact-mail {
+    width: 26px;
+    margin-left: 25px;
+}
+
+
+@media (max-width: 1339px) {
+    .header__logo {
+        width: 157px;
+        margin-left: 25px;
+    }
+    
+    .header__languege {
+        padding-right: 12px;
+    }
+    
+    .header__languege-link span {
+        font-size: 15px;
+    }
+    
+    .header__contact {
+        display: none;
+    }
+    .header__gnavi-btn {
+        width: 35px;
+        height: 42px;
+        margin-right: 25px;
+        position: relative;
+    }
+    
+    .header__gnavi-btn span {
+        width: 15px;
+        height: 2px;
+        background-color: var(--white);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    
+    .header__gnavi-btn span::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background-color: var(--white);
+        top: -9px;
+        right: 0;
+    }
+    
+    .header__gnavi-btn span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background-color: var(--white);
+        top: 9px;
+        right: 0;
+    }
+}
+
+/****************************************************/
+/* gnavi                                            */
+/****************************************************/
+.gnavi__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 33px;
+}
+
+.gnavi__link {
+    display: block;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: var(--font-weight__bold);
+}
+
+.gnavi__item.hover .gnavi__link::after {
+    content: "";
+    width: 32px;
+    height: 2px;
+    background-color: var(--red);
+    display: block;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.gnavi__link:hover {
+    opacity: 1;
+}
+
+
+/*************/
+/* サブメニュー */
+/*************/
+
+/* 共通 */
+.gnavi-submenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-shadow: 3px 3px 4px rgba(163,163,163,0.75);
+    background-color: var(--white);
+    color: var(--black);
+    top: calc(var(--height__header) - 20px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    height: 0;
+}
+.show_submenu .gnavi-submenu {
+    transition: height 0.5s ease;
+}
+
+.gnavi-submenu a {
+    color: var(--black);
+}
+
+.gnavi-submenu__title {
+    position: relative;
+}
+
+.gnavi-submenu__title-ja {
+    font-size: 22px;
+    font-weight: var(--font-weight__bold);
+}
+
+.gnavi-submenu__title-en {
+    font-size: 0;
+    font-family: var(--font-roboto);
+    letter-spacing: 0.1em;
+    line-height: calc(16 / 14);
+    color: var(--gray);
+    position: relative;
+    padding-bottom: 19px;
+}
+
+.gnavi-submenu__title-en::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 55px;
+    height: 2px;
+    background-color: var(--red);
+    bottom: 0;
+    left: 0;
+}
+
+.gnavi-submenu__link {
+    display: block;
+    padding-left: 16px;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    position: relative;
+}
+
+.gnavi-submenu__link::before {
+    content: "";
+    background-image: url(../../img/arrow_s_red.png);
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    background-size: contain;
+}
+
+/* 企業情報 */
+.company.gnavi-submenu {
+    width: 600px;
+}
+
+.show_submenu .company.gnavi-submenu {
+    height: 238px;
+}
+
+.company .gnavi-submenu__inner {
+    display: grid;
+    grid-template-columns: 360px 140px;
+    grid-template-rows: auto 1fr;
+    padding-top: 50px;
+}
+
+
+.company .gnavi-submenu__lists {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-top: 28px;
+}
+
+.company .gnavi-submenu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
+
+.company .gnavi-submenu__figure {
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+
+/* 拠点情報 */
+.base.gnavi-submenu {
+    width: min(874px,100%);
+    display: flex;
+    justify-content: center;
+}
+
+.show_submenu .base.gnavi-submenu {
+    height: 239px;
+}
+
+.base .gnavi-submenu__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 20px;
+    padding: 0 48px;
+    padding-top: 50px;
+}
+
+.base .gnavi-submenu__figure {
+    width: 140px;
+}
+
+.base .gnavi-submenu__item {
+    padding-bottom: 9px;
+}
+
+
+/* 事業案内 */
+.business.gnavi-submenu {
+    width: 857px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.show_submenu .business.gnavi-submenu {
+    height: 500px;
+}
+
+.business .gnavi-submenu__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 20px;
+    padding: 0 48px;
+    padding-top: 50px;
+}
+
+.business .gnavi-submenu__figure {
+    width: 140px;
+}
+
+.business .gnavi-submenu__lists {
+    display: block;
+    max-width: 420px;
+}
+
+.business .gnavi-submenu__list.list1 {
+    grid-column: 1/3;
+    padding-bottom: 25px;
+}
+
+.business .gnavi-submenu__item.title {
+    font-size: 16px;
+    font-weight: var(--font-weight__bold);
+}
+
+.business .gnavi-submenu__item {
+    padding-bottom: 9px;
+}
+
+.business .gnavi-submenu__list.list2 {
+    padding-bottom: 20px;
+}
+
+/* スマホ用　バナー、メニュー、問い合わせリンク */
+.header__banners-sp {
+    padding-top: 38px;
+    padding-bottom: 7px;
+    width: 180px;
+    margin: 0 auto;
+    display: none;
+}
+
+.header__banner {
+    padding-bottom: 13px;
+}
+
+.header__subnavi {
+    text-align: center;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    padding-bottom: 70px;
+    display: none;
+}
+
+
+
+@media (max-width: 1339px) {
+    .gnavi {
+        position: fixed;
+        top: var(--height__header);
+        height: calc(100vh - var(--height__header));
+        width: 100%;
+        overflow-y: scroll;
+        background-color: var(--white);
+        z-index: var(--zindex__hamburger);
+        height: 0;
+        transition: height 0.5s ease;
+    }
+
+    .gnavi__list {
+        display: block;
+        width: var(--width4);
+        margin: 0 auto;
+        padding-top: 12px;
+        /* overflow-y: scroll; */
+    }
+    
+    .gnavi a {
+        color: var(--black);
+    }
+    
+    .gnavi__link {
+        font-size: 18px;
+        line-height: calc(22 / 18);
+        padding: 20px 10px;
+        border-bottom: solid 1px var(--black);
+        position: relative;
+    }
+    .gnavi__link::before {
+        content: "";
+        background-image: url(../../img/arrow_red_r.png);
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        display: block;
+        background-size: contain;
+        left: 185px;
+        top: 22px;
+    }
+    
+    .has_submenu .gnavi__link {
+        display: none;
+    }
+    
+    .gnavi-submenu {
+        display: block;
+        position: unset;
+        height: auto;
+        box-shadow: unset;
+    }
+    
+    .company.gnavi-submenu {
+        width: 100%;
+        border-bottom: solid 1px var(--black);
+        height: 109px;
+        overflow: hidden;
+        transition: height 0.5s ease;
+    }
+    
+    .company .gnavi-submenu__inner {
+        display: block;
+        padding: 0;
+        position: relative;
+    }
+    
+    .gnavi-submenu__title {
+        padding: 34px 10px 17px;
+    }
+    
+    .gnavi-submenu__title-ja {
+        font-size: 18px;
+        line-height: calc(22 / 18);
+        padding-bottom: 6px;
+        position: relative;
+    }
+
+    .gnavi-submenu__title-ja::before {
+        content: "";
+        background-image: url(../../img/btn_plus.png);
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        left: 175px;
+        top: 2px;
+    }
+    
+    .gnavi-submenu__title-en {
+        font-size: 0;
+        line-height: 1;
+        padding-bottom: 17px;
+    }
+    
+    .gnavi-submenu__figure {
+        position: absolute;
+        width: 70px;
+        right: 12px;
+        top: 19px;
+    }
+    
+    .company .gnavi-submenu__lists {
+        padding-top: 0;
+    }
+    
+    .company .gnavi-submenu__list {
+        display: block;
+        padding: 0 10px;
+        padding-top: 10px;
+    }
+    
+    .gnavi-submenu__item {
+        padding-bottom: 11px;
+    }
+    
+    .gnavi-submenu__title-en::after {
+        width: 34px;
+        height: 0;
+        bottom: 17px;
+    }
+
+    .open_sp_submenu .gnavi-submenu__title-en::after {
+        height: 2px;
+    }
+    
+    .base.gnavi-submenu {
+        display: block;
+        border-bottom: solid 1px var(--black);
+        width: 100%;
+        height: 109px;
+        overflow: hidden;
+        transition: height 0.5s ease;
+    }
+    
+    .base .gnavi-submenu__inner {
+        display: block;
+        padding: 0;
+        position: relative;
+    }
+    
+    .base .gnavi-submenu__figure {
+        width: 70px;
+    }
+    
+    .base .gnavi-submenu__list {
+        padding: 0 10px;
+    }
+    
+    .base .gnavi-submenu__list.list1 {
+        padding-top: 10px;
+    }
+    
+    .business.gnavi-submenu {
+        width: 100%;
+        display: block;
+        border-bottom: solid 1px var(--black);
+        height: 109px;
+        overflow: hidden;
+        transition: height 0.5s ease;
+    }
+    
+    .business .gnavi-submenu__inner {
+        display: block;
+        padding: 0;
+        position: relative;
+    }
+    
+    .business .gnavi-submenu__figure {
+        width: 70px;
+    }
+    
+    .business .gnavi-submenu__lists {
+        display: block;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    
+    .business .gnavi-submenu__list.list1 {
+        padding-bottom: 7px;
+    }
+    
+    .business .gnavi-submenu__list {
+        width: 100%;
+        border: none !important;
+        padding-bottom: 7px;
+    }
+
+    /* スマホ用　バナー、メニュー、問い合わせリンク */
+    .header__banners-sp {
+        display: block;
+    }
+    
+    .header__subnavi {
+        display: block;
+        padding-bottom: 110px;
+    }
+}

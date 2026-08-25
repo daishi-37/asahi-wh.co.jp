@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+/****************************************************/
+/* company-greeting                                 */
+/****************************************************/
+.company-greeting {
+    padding-bottom: 30px;
+}
+
+.company-greeting__inner {
+    width: var(--width7);
+    margin: 0 auto;
+    position: relative;
+    padding-top: 1px;
+}
+
+.company-greeting__figure {
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .company-greeting {
+        padding-bottom: 20px;
+    }
+
+    .company-greeting__inner {
+        width: 100%;
+    }
+}
+
+
+/****************************************************/
+/* company-overview                                 */
+/****************************************************/
+.company-overview {
+    padding-bottom: 90px;
+}
+
+.company-overview__inner {
+    width: var(--width3);
+    margin: 0 auto;
+}
+
+
+/****************************************************/
+/* company-message                                  */
+/****************************************************/
+.company-message .h2-type3 {
+    width: var(--width2);
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.company-message__box {
+    width: var(--width3);
+    margin: 0 auto;
+    padding: 70px 20px;
+    background: #e1e0e7;
+    background: linear-gradient(to bottom, #e1e0e7 0%, #e4e7eb 100%);
+    border-radius: 5px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.company-message__box::before {
+    content: "";
+    background-image: url(../../img/company/aisatu_back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    width: 100%;
+    max-width: 463px;
+    height: 444px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.company-message__title {
+    font-size: 24px;
+    font-weight: var(--font-weight__bold);
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.company-message__lists {
+    max-width: 660px;
+    width: 100%;
+    margin: 0 auto;
+    counter-set: cnt 0;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+.company-message__list {
+    padding-left: 38px;
+    padding-bottom: 24px;
+    position: relative;
+    font-size: 20px;
+    font-weight: var(--font-weight__bold);
+    line-height: calc(24 / 20);
+    counter-increment: cnt 1;
+}
+
+.company-message__list::before {
+    content: counter(cnt)"、";
+    position: absolute;
+    left: 0;
+}
+
+.company-message__sign {
+    width: 100%;
+    max-width: 660px;
+    text-align: right;
+    margin: 0 auto;
+    position: relative;
+}
+
+.company-message__sign p {
+    display: inline-block;
+    margin-left: auto;
+    text-align: left;
+    font-size: 18px;
+    font-weight: var(--font-weight__bold);
+    line-height: calc(26/18);
+}
+
+
+/****************************************************/
+/* download-files                                   */
+/****************************************************/
+.download-files__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 60px;
+}
+
+.download-files__inner {
+    width: var(--width2);
+    margin: 0 auto;
+}
+
+.download-files__item {
+    width: calc((100% - 120px) / 3);
+    padding-bottom: 88px;
+}
+
+.download-files__figure {
+    padding-bottom: 20px;
+}
+
+.download-files__text {
+    text-align: center;
+    font-size: 20px;
+    font-weight: var(--font-weight__bold);
+    line-height: calc(27 / 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-files__text::before {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background-color: var(--red);
+    border-radius: 50%;
+    background-image: url(../../img/icon_download.png);
+    background-size: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+.download-files__img {
+    border: solid 1px var(--black);
+}
+
+.download-files {
+    padding-bottom: 54px;
+}
+
+
+@media (max-width: 768px) {
+    .download-files__list {
+        column-gap: 40px;
+    }
+    
+    .download-files__item {
+        width: calc((100% - 40px) / 2);
+        max-width: 250px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .download-files__item {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+    
+    .download-files__text {
+        font-size: 18px;
+        line-height: calc(27 / 18);
+    }
+}
