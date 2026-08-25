@@ -967,6 +967,22 @@
     background-color: rgba(192,0,0,0.6);
 }
 
+.basepage-tenant__item.basepage-tenant__item--secondary {
+    .basepage-tenant__figure {
+        aspect-ratio: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .basepage-tenant__img {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+    }
+}
 
 @media (max-width: 768px) {
     .basepage-tenant__title {
